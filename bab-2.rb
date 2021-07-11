@@ -158,8 +158,8 @@ end
 
 puts "atau2"
 
-i = 50
-while i > 100 #TIDAK DICETAK karena pernyataan tidak benar pada while bersifat undefined
+i = 100
+while i < 50 #TIDAK DICETAK karena pernyataan tidak benar pada while bersifat undefined DAN apabila diganti menjadi ">" akan terjadi bilangan tidak terhingga
     puts i
     i += 5 
 end
