@@ -75,3 +75,16 @@ olahraga.each do |lelah|#Jadi each do itu mengumpulkan data didalam variabel ola
     puts "Benar banget bre #{lelah[:ali]}"
   end
 end
+
+
+print "Harga susu berapa?"
+beli = gets.chomp
+beli.upcase!
+
+print "Beli apa lagi mas?"
+beliDua = gets.chomp
+beliDua.upcase!
+
+beli_total = beli + beliDua
+
+puts "Oalah masnya mau #{beli} dan #{beliDua} oke mas jadi totalnya #{beli_total}"

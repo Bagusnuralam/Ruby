@@ -96,6 +96,7 @@ ali.each do |oncom|
     end
 end
 
+=begin
 susu = "Mau beli susu apa mas? "
 print susu
 input_susu = gets.chomp.to_i
@@ -127,6 +128,7 @@ input_yudi.gsub!(/mama/, "neni")
 
 input_yudinew = "maaf kaya nya ngga boleh ama bang pian"
 puts input_yudinew
+=end
 
 #AKHIR PELAJARAN DARI BOOLEAN, INTEGER, STRING, IF ELSE ELSIF
 
@@ -135,34 +137,34 @@ puts input_yudinew
 i = 0
 while i < 5
     puts i
-    i = i + 1
+    i = i + 2 #Output yang diterima ialah kelipatan longkap 2
 end  
 
-puts "---1"
+puts "atau1"
+
+i = 20
+while i < 100
+    puts i 
+    i += 5 #Sebagai pemberhenti perulangan, Output yang diberikan longkap 5
+end
+
+puts "---2"
 
 i = 25
 while i > 3
     puts i
-    i = i - 20
+    i -= 5 #Sebagai pemberhenti perulangan, Output yang diberikan longkap 5 tetapi dalam itung mundur
 end 
 
-puts "---2"
+puts "atau2"
 
-i = 2
-until i > 30
-    puts i 
-    i += 3
-end 
+i = 50
+while i > 100 #TIDAK DICETAK karena pernyataan tidak benar pada while bersifat undefined
+    puts i
+    i += 5 
+end
 
 puts "---3"
-
-i = 25
-while i < 100
-  puts i
-  i += 5
-end 
-
-puts "---4"
 
 i = 10
 while i < 20
@@ -170,7 +172,7 @@ while i < 20
     i += 2
 end 
 
-puts "---5"
+puts "---4"
 
 i = 3
 while i < 30
@@ -178,7 +180,7 @@ while i < 30
     i *= 2
 end 
 
-puts "---6"
+puts "---5"
 
 i = 2
 until i > 300
@@ -207,9 +209,9 @@ puts "---for"
    # puts "akang bagus"
 #end 
 #-SAMA AJA-
-#loop {
+#loop 
     # puts "akang bagus"
-}
+
 
 
 
