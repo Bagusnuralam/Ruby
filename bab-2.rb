@@ -213,8 +213,30 @@ puts "---for"
     # puts "akang bagus"
 
 
-
-
+    require 'date'
+    timestamp = DateTime.now
+    prompt = '-> '
+    
+    # collect book name
+    puts 'Enter a new book' 
+    print prompt
+    book = gets.chomp
+    
+    
+    # collect book rating
+    puts 'What rating would you give ' + book + '?'
+    puts 'scale from 1 - 5'
+    print prompt
+    rating = gets.chomp
+    
+    # comment on the book rating
+    if rating.to_i < 3 
+        puts 'Wow, I wont be adding that to my reading list!'
+    elsif rating.to_i == 3 
+        puts 'That sounds like a mediocre book.'
+    else 
+        puts 'Oh! Sounds like I need to read that book!'
+    end
 
 
 
