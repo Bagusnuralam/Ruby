@@ -60,9 +60,9 @@ else
   puts "bukan anaknya" #Benar, dicetak apabila pernyataan pada keduanya (elsif dan if) salah maka else akan dicetak
 end 
 
-hungry = false #Variabel dinyatakan benar
+hungry = false #Variabel dinyatakan salah
 
-unless hungry
+unless hungry #Sebuah pengecualian dari pernyataan yang diberikan. kebalikannya dari tipe If-end
   puts "I'm writing Ruby programs!" #Dicetak apabila pernyataan dari variabel bernilai salah
 else
   puts "Time to eat!"#Dicetak apabila pernyataan dari variabel bernilai benar 

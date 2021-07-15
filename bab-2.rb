@@ -49,7 +49,7 @@ mapel = [
 ]
 
 if lesson = mapel[2] || lesson = mapel[0]
-    puts "ini pelajaran yang gw suka #{lesson[:ppkn]} dengan nilai gw #{lesson[:nilai0]}"
+    puts "ini pelajaran yang gw suka #{lesson[:ppkn]} dengan nilai gw #{lesson[:nilai1]}"
 else
     puts "kayanya gw ngga suka pelajarannya deh #{lesson[:mtka]}"
 end
@@ -57,7 +57,7 @@ end
 text = "Belajar ruby programmer".length
 text1 = "Belajar harus semangat".capitalize
 
-teks = text1
+teks = text
 puts teks
 
 #Array dengan element hash
