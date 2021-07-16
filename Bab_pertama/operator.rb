@@ -32,7 +32,11 @@ puts 4 <= 4 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih kecil/sama
 
 puts 4 < 5 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih kecil dari nilai yang kanan
 
-puts 2 <=> 4
+puts 2 <=> 4 # Bernilai -1 karena nilai yang ada disebelah kiri lebih kecil dari nilai sebelah kanan nil
+
+puts 5 <=> 2 # Bernilai 1 karena nilai yang dikiri lebih besar dari nilai disebelah kanan
+
+puts 4 <=> 4 # Bernilai 0 karena nilai yang dikiri sama dengan nilai disebelah kanan
 
 #Operator Logika
 puts 4 < 5 && 4 >= 4
