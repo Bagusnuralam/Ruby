@@ -99,6 +99,6 @@ puts "Selamat Pagi".delete("a") #=> Yaitu menghapus abjad yang kita tuju pada se
 #.gsub
 puts "seman99at semua".gsub("9", "g") # =>yaitu merubah angka yang ada pada sebuah string menjadi satuan abjad yang kita menghapus
 
-#CONVERTING OTHRE OBJECT TO STRING
+#CONVERTING OTHER OBJECT TO STRING
 puts 10.to_s # => maka 10 bukan lagi menjadi integer melainkan menjadi sebuah string "10"
 puts :simbol.to_s # => Maka simbol berubah menjadi string
