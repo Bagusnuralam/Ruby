@@ -127,5 +127,5 @@ print num.sample(4) # Yaitu mencetak 4 elemen dan menampikan secara random sesua
 
 puts "\n-------"
 
-
+puts("delta alpha victor mike sierra".split.sort.map{|word| word.capitalize})
 
