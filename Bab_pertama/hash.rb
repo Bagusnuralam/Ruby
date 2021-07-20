@@ -52,3 +52,4 @@ abjad2 = { 2 => "kedua", 3 => "ketiga"}
 
 print abjad1.merge(abjad2) # Menggabungkan nilai yang ada di abjad1 dengan abjad2 yang menimpanya, pernyataan yang tertera bahwa kunci terlihat sama maka akan terganti dengan nilai pada abjad2
 
+
