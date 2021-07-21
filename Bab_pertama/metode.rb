@@ -63,6 +63,38 @@ puts average(10, 20)
 hasil = average(10, 20)
 puts "hasil : #{hasil + 50}"
 
+def harga(susu,sabun)
+    total = susu * sabun
+    return total
+end
+
+puts harga(20,3)
+
+hasil = harga(20,3)
+puts "Jadi total harga nya : #{hasil}"
+# => nil
+
+puts "\n-------"
+
+print "Tolong masukkan urutan:"
+masuk = gets.chomp
+
+def number(masuk)
+    if masuk.to_i >= 20
+        puts "Dimohon tunggu untuk antrian: #{masuk}"
+    elsif masuk.to_i <= 20
+        puts "Dimohon masuk keruangan untuk antrian: #{masuk} "
+    elsif masuk.empty?
+        puts "Masukkan nomor urutan !"
+    else
+        puts "Pernyataan anda salah"
+    end
+end
+puts number(masuk)
+# => nil
+
+
+
 
 
 
