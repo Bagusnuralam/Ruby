@@ -129,3 +129,53 @@ puts "\n-------"
 
 puts("delta alpha victor mike sierra".split.sort.map{|word| word.capitalize})
 
+puts "\n-------"
+
+#Bubble sort
+
+def bubble_sort(array)
+    array_length = array.size
+    return array if array_length <= 1
+
+    loop do
+        swapped = false
+
+        (array_length - 1).times do |i|
+            if array[i] > array[i + 1]
+                array[i], array[i + 1] = array[i + 1], array[i]
+                swapped = true
+            end
+        end
+        
+        break if not swapped
+    end
+
+    array
+end
+
+
+unsorted_array = [17, 5, 20, 1, 7]
+
+print bubble_sort(unsorted_array)
+
+puts "\n-------"
+
+#Selection Sort
+
+def selection_sort(array)
+    n = array.length - 1
+    n.times do |i|
+        min_index = i
+        for j in (i + 1)..n
+            min_index = j if array[j] < array[min_index]
+        end
+        array[i], array[min_index] = array[min_index], array[i] if min_index != i
+    end
+    print array
+end
+
+array = [12, 4, 22, 63, 31, 8, 47]
+
+selection_sort(array)
+
+puts "\n-------"

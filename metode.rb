@@ -63,37 +63,51 @@ puts average(10, 20)
 hasil = average(10, 20)
 puts "hasil : #{hasil + 50}"
 
-def harga(susu,sabun)
-    total = susu * sabun
+puts "\n-------"
+
+def harga(susu,sabun) # Dapat dilihat bahwa method berupa harga dan diberi parameter (susu,sabun)
+    total = susu * sabun # disini didefinisikan yang mau kita cetak
     return total
 end
 
-puts harga(20,3)
+puts harga(20,3) # Dapat dilihat bahwa method nya harga yang diberi argumen 20,3
 
-hasil = harga(20,3)
+hasil = harga(20,3) # Methode tersebut dibuat variabel baru
 puts "Jadi total harga nya : #{hasil}"
 # => nil
 
 puts "\n-------"
 
-print "Tolong masukkan urutan:"
+print "Tolong masukkan urutan: "
 masuk = gets.chomp
 
-def number(masuk)
-    if masuk.to_i >= 20
+def number(masuk) # Disini dapat dilihat bahwa method nya ialah number dan parameternya "masuk"
+    if masuk.to_i >= 20 # Kalau data yang di input lebih sama dengan 20 maka dicetak pernyataan pertama             
         puts "Dimohon tunggu untuk antrian: #{masuk}"
-    elsif masuk.to_i <= 20
+    elsif masuk.to_i <= 20 # Kalau data yang di input kurang sama dengan 20 maka dicetak pernyataan kedua
         puts "Dimohon masuk keruangan untuk antrian: #{masuk} "
     elsif masuk.empty?
-        puts "Masukkan nomor urutan !"
+        puts "Masukkan nomor urutan !" # Kalau data yang di input kosong dan langsung enter tanpa di isi maka akan dicetak pernyataan kedua
     else
         puts "Pernyataan anda salah"
     end
 end
-puts number(masuk)
-# => nil
+puts number(masuk) 
+# => ni
 
 
+# Method predikat
+# => Yang dimaksud adalah sebuah metode predikat dengan memakai notasi simbol "?"
+
+puts "Mantap".empty? # => False
+
+puts 10.even? # => True, karena even Untuk genap
+
+puts 11.even? # => False
+
+puts 12.odd? # => False
+
+puts 10.between?(8,12) # => True
 
 
 

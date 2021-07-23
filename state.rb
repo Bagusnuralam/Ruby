@@ -35,6 +35,26 @@ else
     puts "Pernyataan keduanya salah"
 end 
 
+name = "Bagus"
+passinggrade = 100/2 * 3 + 500 - 180
+
+if passinggrade > 400 && passinggrade < 500
+        puts "mantap mas #{name} anda diterima" + " " + "dengan skor #{passinggrade}" 
+
+    elsif passinggrade == 500
+        puts "sesuai kkm, maka #{name} dapat dinyatakan lulus"
+
+    elsif passinggrade != 500
+        puts "maaf #{name} anda tidak lulus seleksi"
+
+    elsif passinggrade %20 == 0
+        puts "mantap pak anda lulus #{name}"
+
+    else passinggrade > 400 || passinggrade < 500
+        puts "sesuai kkm, maka #{name} dapat dinyatakan lulus"
+
+end 
+
 print "Masukkan usia anda :"
 usia =  gets.to_i
 
