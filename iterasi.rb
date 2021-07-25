@@ -58,6 +58,25 @@ puts kapital #Cara mudahnya menggunakan method .map
 
 puts "\n-------"
 
+child = [
+    {cita: "dokter", umur: 25, tempat: "puskesmas"}, #HASH
+    {cita: "TNI", umur: 20, tempat: "satgas"},
+    {cita: "arsitek", umur: 28, tempat: "bangunan"}
+] #ARRAY
+
+child.each do |dream|
+    puts "----"
+    puts "Seseorang bakal sukses kedepannya sebagai #{dream[:cita]} diumur #{dream[:umur]}"
+
+    if dream[:tempat]
+        puts "nanti sewaktu bakal ditinggal dan menetap di#{dream[:tempat]}"
+    else
+        puts "sewaktu ngga kemana-mana"
+    end
+end
+
+puts "\n-------"
+
 #Method .map
 # => Mengubah setiap elemen pada array apapun yang di inginkan dan mengembalikan unsur perubahan pada array baru
 
@@ -91,26 +110,67 @@ batu.map do |bebatuan|
     puts bebatuan << "-keras"
 end
 
+puts "\n-------"
+
+cat = ["hijau", "orange", "kuning"]
+
+cat.map do |bahan|
+    print bahan.capitalize.split
+end 
+
+puts "\n-------"
+
 #Method .select
+# => Menyeleksi dan akan dicetak apabila tiap item dalam array diatur kondisi true sesuai apa yang kita mau
 
+name = ["bagus", "fia", "syifa", "indah"]
 
-
-child = [
-    {cita: "dokter", umur: 25, tempat: "puskesmas"}, #HASH
-    {cita: "TNI", umur: 20, tempat: "satgas"},
-    {cita: "arsitek", umur: 28, tempat: "bangunan"}
-] #ARRAY
-
-child.each do |dream|
-    puts "----"
-    puts "Seseorang bakal sukses kedepannya sebagai #{dream[:cita]} diumur #{dream[:umur]}"
-
-    if dream[:tempat]
-        puts "nanti sewaktu bakal ditinggal dan menetap di#{dream[:tempat]}"
-    else
-        puts "sewaktu ngga kemana-mana"
+name.select do |doi|
+    if doi != "bagus" # => "bagus" akan bernilai true karena menseleksi kalimat yang sama "bagus" dan akan dicetak
+       puts doi.capitalize
     end
 end
+
+print "pilih topinya : "
+topi = gets.chomp
+rambut = topi
+
+print "pilih bajunya : "
+baju = gets.chomp
+dada = baju
+
+print "pilih sepatunya : "
+sepatu = gets.chomp
+kuku = sepatu
+
+pakaian = [rambut, dada, kuku]
+
+pakaian.select do |outfit|
+     if outfit == "baju"
+        puts "kayanya baju kita lagi kosong yang ada cuma  #{outfit}"
+     end
+end
+
+puts "\n-------"
+
+jawab = {"mangga" => "sepet", "jeruk" => "asem", "apel" => "manis"}
+
+jawab.select do |buah, respon|
+     if respon != "manis"
+        puts "saya tidak mau beli #{respon}"
+     end
+end
+
+puts "\n-------"
+
+# Method .reduce
+# => Sebuah method untuk mengurangi salah satu elemen array atau hash yang kita tuju dan harus digunakan apabila ketika ingin mendapat output yang di inginkan dari satu nilai
+
+
+
+
+
+
 
 
 
