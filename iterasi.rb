@@ -164,12 +164,43 @@ end
 puts "\n-------"
 
 # Method .reduce
-# => Sebuah method untuk mengurangi salah satu elemen array atau hash yang kita tuju dan harus digunakan apabila ketika ingin mendapat output yang di inginkan dari satu nilai
+# => Sebuah method untuk mengurangi salah satu elemen array atau hash yang kita tuju menjadi ke satu objek dan harus digunakan apabila ketika ingin mendapat output yang di inginkan dari satu nilai
 
+romawi = [8, 21, 9, 11, 56]
 
+angka = 0
 
+romawi.each do |tambah|
+    puts angka += tambah
+end
+# Ringkasnya memakai .reduce
 
+my_numbers = [5, 6, 7, 8]
 
+result = my_numbers.reduce { |sum, number| sum + number }
+
+puts result
+
+# Jadi untuk reduce dan inject ialah sebuah akumulator dari berjalanya iterasi
+=begin
+Nilai awal akumulator adalah elemen pertama dalam koleksi, jadi untuk setiap langkah iterasi, kita akan memiliki yang berikut:
+
+Iterasi 0: jumlah = 5 + 6 = 11
+Iterasi 1: jumlah = 11 + 7 = 18
+Iterasi 2: jumlah = 18 + 8 = 26
+=end
+
+# .inject SAMA SAJA DENGAN REDUCE cuma sinonim
+
+bilangan = [6, 5, 9, 13, 4]
+
+hasil  = bilangan.inject(10) do |jumlah, rekap|
+
+    jumlah > rekap ? jumlah + rekap : jumlah - rekap
+
+endn
+
+puts hasil
 
 
 

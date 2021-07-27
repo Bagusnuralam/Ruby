@@ -26,13 +26,13 @@ puts "kucing" != "ayam" #Bernilai TRUE apabila perbandingan nilai tidak sama, en
 
 puts 4 >= 4 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih besar/sama dengan dari nilai yang kanan
 
-puts 5 > 4 #Bernilai TRUE apabila perbandingan nilai yang kirilebih besar dari nilai yang kanan
+puts 5 > 4 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih besar dari nilai yang kanan
 
 puts 4 <= 4 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih kecil/sama dengan dari nilai yang kanan
 
 puts 4 < 5 #Bernilai TRUE apabila perbandingan nilai yang kiri lebih kecil dari nilai yang kanan
 
-puts 2 <=> 4 # Bernilai -1 karena nilai yang ada disebelah kiri lebih kecil dari nilai sebelah kanan nil
+puts 2 <=> 4 # Bernilai -1 karena nilai yang ada disebelah kiri lebih kecil dari nilai sebelah kanan
 
 puts 5 <=> 2 # Bernilai 1 karena nilai yang dikiri lebih besar dari nilai disebelah kanan
 
@@ -75,9 +75,9 @@ boolean_2 = false
 boolean_3 = true
 
 if (12 == 33) || (22!= 33)
-        puts "Benar"
-        elsif 12 <= 33 && !(22 < 33)
-        puts "salah"
-        else 
-        puts "keduanya salah"
-        end
+   puts "Benar"
+elsif 12 <= 33 && !(22 < 33)
+   puts "salah"
+else 
+   puts "keduanya salah"
+end
