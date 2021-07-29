@@ -70,7 +70,7 @@ negara = ["indonesia", "belanda", "afrika", "india"]
 kapital = []
 
 negara.each do |flag| 
-    kapital.push(flag.upcase)
+    kapital.push(flag.upcase) #method dengan penambahan .push yang dimaksud tolong dong flag masuk/push ke dalam kapital kosong tapi sebelum masuk rubah dulu jadi upcase
 end
 
 puts kapital #Cara mudahnya menggunakan method .map
@@ -83,7 +83,7 @@ puts "\n-------"
 lampu = ["nyala lampu merah", "nyala lampu hijau", "nyala lampu kuning"]
 
 lampu.map do |color|
-    puts color.gsub("nyala", "mati")
+    puts color.gsub("nyala", "mati") # method .gsub mengubah format "nyata" menjadi "mati"
 end
 
 puts "\n-------"
@@ -163,6 +163,17 @@ jawab.select do |buah, respon|
 end
 
 puts "\n-------"
+#
+
+jawab = {mangga: "sepet", jeruk: "asem", apel: "manis"}
+
+hasil = jawab.find_all do |buah, respon|
+       respon != "asem"
+end
+
+print hasil
+
+puts "\n-------"
 
 # Method .reduce
 # => Sebuah method untuk mengurangi salah satu elemen array atau hash yang kita tuju menjadi ke satu objek dan harus digunakan apabila ketika ingin mendapat output yang di inginkan dari satu nilai
@@ -174,6 +185,24 @@ angka = 0
 romawi.each do |tambah|
     puts angka += tambah
 end
+
+#atau lebih jelasnya 
+
+puts "\n-------"
+
+romawi = [8, 21, 9, 11, 56]
+angka = 0
+
+romawi.each do |tambah|
+
+    hasil = angka += tambah
+
+    puts hasil
+ 
+end
+
+puts "\n-------"
+
 # Ringkasnya memakai .reduce
 
 my_numbers = [5, 6, 7, 8]
@@ -191,6 +220,8 @@ Iterasi 1: jumlah = 11 + 7 = 18
 Iterasi 2: jumlah = 18 + 8 = 26
 =end
 
+puts "\n-------"
+
 # .inject SAMA SAJA DENGAN REDUCE cuma sinonim
 
 bilangan = [6, 5, 9, 13, 4]
@@ -202,6 +233,8 @@ hasil  = bilangan.inject(10) do |jumlah, rekap|
 end
 
 puts hasil
+
+puts "\n-------"
 
 pemilu = ["jokowi", "prabowo", "alam", "anies"]
 
@@ -273,9 +306,25 @@ rupiah = [100, 200, 300, 400]
 
 rupiah.select!  do |harga|
     
-    if harga < 200
+    if harga > 200
         puts harga
     end
 
-        return harga
 end
+
+
+angka = {a: 1,b: 2,c: 3,d: 4,e: 5,f: 6}
+
+result = angka.find_all do |key, value|
+    value.even?
+end
+
+print result
+
+puts "\n-------"
+
+hasil = angka.select do |key,value| 
+    value.even? 
+end
+
+puts hasil
