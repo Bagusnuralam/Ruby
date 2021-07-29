@@ -74,7 +74,7 @@ boolean_2 = false
 # boolean_3 = true || !(true || false)
 boolean_3 = true
 
-if (12 == 33) || (22!= 33)
+if (12 == 33) || (22 != 33)
    puts "Benar"
 elsif 12 <= 33 && !(22 < 33)
    puts "salah"

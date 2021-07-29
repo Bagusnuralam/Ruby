@@ -47,17 +47,6 @@ end
 
 puts "\n-------"
 
-negara = ["indonesia", "belanda", "afrika", "india"]
-kapital = []
-
-negara.each  do |flag| 
-    kapital.push(flag.upcase)
-end
-
-puts kapital #Cara mudahnya menggunakan method .map
-
-puts "\n-------"
-
 child = [
     {cita: "dokter", umur: 25, tempat: "puskesmas"}, #HASH
     {cita: "TNI", umur: 20, tempat: "satgas"},
@@ -74,6 +63,17 @@ child.each do |dream|
         puts "sewaktu ngga kemana-mana"
     end
 end
+
+puts "\n-------"
+
+negara = ["indonesia", "belanda", "afrika", "india"]
+kapital = []
+
+negara.each do |flag| 
+    kapital.push(flag.upcase)
+end
+
+puts kapital #Cara mudahnya menggunakan method .map
 
 puts "\n-------"
 
@@ -131,6 +131,7 @@ name.select do |doi|
     end
 end
 
+=begin
 print "pilih topinya : "
 topi = gets.chomp
 rambut = topi
@@ -150,7 +151,7 @@ pakaian.select do |outfit|
         puts "kayanya baju kita lagi kosong yang ada cuma  #{outfit}"
      end
 end
-
+=end
 puts "\n-------"
 
 jawab = {"mangga" => "sepet", "jeruk" => "asem", "apel" => "manis"}
@@ -198,11 +199,83 @@ hasil  = bilangan.inject(10) do |jumlah, rekap|
 
     jumlah > rekap ? jumlah + rekap : jumlah - rekap
 
-endn
+end
 
 puts hasil
 
+pemilu = ["jokowi", "prabowo", "alam", "anies"]
+
+rekapan = pemilu.reduce(Hash.new(0)) do |hasil, vote|
+    hasil[vote] += 1
+    hasil
+end
+
+puts rekapan
+
+puts "\n-------"
+=begin
+
+print "Pilih ketua kelas: "
+ketua_kelas = gets.chomp
+
+print "Pilih bendahara: "
+bendahara = gets.chomp
+
+print "Pilih wakil ketua: "
+wakil_ketua = gets.chomp
+
+terpilih = [ketua_kelas, bendahara, wakil_ketua]
+
+pilih = terpilih.each do |hasil|
+       hasil
+end
+
+pilihan = ["ketua kelas", "bendahara", "wakil ketua"]
+
+hasil = pilihan.reduce(Hash.new(pilih)) do |anggota, nama|
+
+    anggota[nama] = pilih
+        anggota
+
+end
+
+puts hasil
+=end
+
+# Metode Bang
+# => ialah berupa penambahan tanda seru ! diakhir nama method. bersifat merusak dari modifikasi yang sudah sesuai sebelum pemakaian bang (!)
+# => Biasanya tersedia pada method .select dan .map
+elemen = ["air", "api", "udara"]
+
+elemen.map do |energi|
+    puts energi.upcase.reverse
+end
+
+puts elemen # => Akan mengembalikan nilai asli pada elemen di dalam indeks
 
 
+puts "\n-------"
+# Sedangkan penambahan bang (!)
+
+elemen = ["air", "api", "udara"]
+
+elemen.map!  do |energi| 
+
+    puts energi.upcase.reverse 
+    energi 
+
+end
+
+puts elemen # => Hasilnya akan permanen pada perubahan yang terjadi
 
 
+rupiah = [100, 200, 300, 400]
+
+rupiah.select!  do |harga|
+    
+    if harga < 200
+        puts harga
+    end
+
+        return harga
+end
