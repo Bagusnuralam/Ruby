@@ -66,7 +66,9 @@ puts "hasil : #{hasil + 50}"
 puts "\n-------"
 
 def harga(susu,sabun) # Dapat dilihat bahwa method berupa harga dan diberi parameter (susu,sabun)
+
     total = susu * sabun # disini didefinisikan yang mau kita cetak
+    
     return total
 end
 

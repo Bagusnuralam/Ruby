@@ -328,3 +328,21 @@ hasil = angka.select do |key,value|
 end
 
 puts hasil
+
+puts "\n-------"
+
+#Mengembalikan nilai pada iterasi yang sudah dieksekusi
+
+def balikin(angka)
+
+    angka.select! do |key,value| 
+        value.odd?
+    end
+        
+end
+
+puts angka # Apabila dicetak nilai yang mau dirubah akan dikembalikan sesuai value
+
+puts "\n-------"
+
+puts balikin(angka) # Dicetak nilainy akan berubah dari value pada iterasi yang dieksekusi
