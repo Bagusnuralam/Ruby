@@ -55,7 +55,25 @@ end
 
 puts final.include?("sandi")
 
+# .any?
+# => Yaitu berarti apakah ada sebuah elemen yang kita tuju pada indeks yang sudah tertera
 
+stationery = ["book", "pen", "eraser"]
+result = false
 
+def check(stationery)
+
+    stationery.each do |stationery_check|
+        if stationery_check == "pencil"
+
+            result = true 
+        else 
+            result
+        end
+    end
+
+    return check(stationery.any?)
+
+end
 
 
