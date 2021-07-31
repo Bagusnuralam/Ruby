@@ -24,6 +24,38 @@ angka.each do |maka| # => Perincian contohnya memakai method .each yang sebenarn
     end
 end
 
-puts hasil 
+puts hasil
+
+# Atau
+
+indeks = 8
+hasil = false
+
+angka.each do |maka|
+    if maka == indeks
+        hasil = true 
+    else
+        hasil
+    end
+end
+
+puts hasil
+
+# Lebih Sederhana menggunakan method .include?
+
+puts angka.include?(2) # Maka dicetak false, karena elemen 2 tidak terdaftar dalam indeks array
+
+puts angka.include?(3) # Maka dicetak true, karena elemen 3 terdaftar dalam indeks array
+
+pemilu = ["jokowi", "prabowo", "sandi"]
+
+final = pemilu.select do |hasil|
+    hasil != "sandi"
+end
+
+puts final.include?("sandi")
+
+
+
 
 
